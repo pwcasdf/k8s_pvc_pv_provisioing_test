@@ -9,7 +9,7 @@ spec:
     - ReadWriteOnce
   azureFile:
     secretName: azure-secret
-    shareName: share2
+    shareName: <azurefiles_share_name>
     readOnly: false
   mountOptions:
   - dir_mode=0777
