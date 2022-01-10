@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: azurefile
+  name: azuredisk
+  labels:
+    app: loki
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: ""
+  storageClassName: "sc_name"
   resources:
     requests:
       storage: 5Gi

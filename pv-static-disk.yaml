@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: azure-disk-pv
+spec:
+  capacity:
+    storage: 5Gi
+  storageClassName: "<sc_name>"
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  azureDisk:
+    kind: Managed
+    diskName: <disk_name>
+    diskURI: <disk_resource_id>

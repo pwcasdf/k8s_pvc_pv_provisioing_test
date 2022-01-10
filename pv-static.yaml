@@ -2,6 +2,8 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: azurefile
+  labels:
+    app: loki
 spec:
   capacity:
     storage: 5Gi
@@ -9,7 +11,7 @@ spec:
     - ReadWriteOnce
   azureFile:
     secretName: azure-secret
-    shareName: <azurefiles_share_name>
+    shareName: share
     readOnly: false
   mountOptions:
   - dir_mode=0777
