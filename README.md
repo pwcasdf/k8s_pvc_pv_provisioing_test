@@ -1,4 +1,4 @@
-# testing dynamic, static provisioning on pvc
+# testing dynamic, static provisioning on pvc (Azure)
 
 ## dynamic
 1. appply pvc-dynamic.yaml
